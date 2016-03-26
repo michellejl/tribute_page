@@ -1,0 +1,171 @@
+// COLORS
+$nav_color: #fff;
+$dark_color: #002635;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: $dark_color;
+  color: #fff;
+}
+
+
+/* HEADER BAR SETTINGS */
+
+header {
+  position: fixed;
+  padding-top: 20px;
+  height: 60px;
+  box-shadow: 0px 5px 10px black;
+  width: 100%;
+  z-index: 999;
+  background: $dark_color;
+  div.container {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    align-items: stretch;
+    nav, h1 {
+      flex: 1 100px;
+    }
+    nav {
+      flex-grow: 2;
+    }
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    a {
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      color: $nav_color;
+      width: 100%;
+      text-align: center;
+      font-size: 1.2em;
+      &:hover {
+        color: $dark_color;
+        background: $nav_color;
+      }
+      span {
+        align-self: center;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  header {
+    min-height: 90vh;
+    position: relative;
+    div.container, nav { 
+      text-align: center;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    nav {
+      
+      a {
+        width: inherit;
+        border: 1px solid $nav_color;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 5px;
+        &:last-child {
+          border-width: 1px;
+        }
+      } 
+    }
+    &:after {
+      position: absolute;
+      top: 80vh;
+      left: 45vw;
+      color: $nav_color;
+      font-size: 3em;
+      font-family: FontAwesome;
+      content: "\f01a";
+    }
+  }
+}
+
+
+/* CONTENT SETTINGS */
+
+.body-content { 
+  max-width: 70%;
+  margin: 0 auto;
+  padding-top: 100px;
+  p {
+    margin-bottom: 1.5em;
+  }
+  .section {
+    margin-bottom: 100px;
+    img {
+      width: 35%;
+      max-width: 350px;
+      &.left {
+        float: left;
+        padding: 10px 15px 10px 0;
+      }
+      &.right {
+        float: right;
+        padding: 10px 0 10px 15px;
+      }
+    }
+    h2 {
+      font-size: 2em;
+      border: solid $nav_color;
+      border-width: 2px 0;
+      margin-bottom: 50px;
+      padding: 0 10px;
+    }
+    &.aboutBand {
+      h2 {
+        text-align: center;
+      }
+    }
+    &.aboutBM h2 {
+        text-align: right;
+      }
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  .body-content {
+    padding-top: 25px;
+    .section {
+      img {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 25px;
+        &.right {
+          float: none;
+        }
+        &.left {
+          float: none;
+        }
+      }
+      p {
+        text-align: justify;
+      }
+      &.bandMember h2 {
+        text-align: center !important;
+      }
+    }
+  }
+}
+
+
+
+/* GENERAL SETTINGS */
+.clearfix:after {
+     content: “”;
+     display: table;
+     clear: both;
+}
