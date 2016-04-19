@@ -9,4 +9,4 @@
 	* Add some custom CSS
 	* Create a basic page from the given user stories
 
-This was created as a responce to a challenge project prompt given by FreeCodeCamp
+This was created as a response to a challenge project prompt given by FreeCodeCamp
